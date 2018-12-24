@@ -1,0 +1,67 @@
+.list-header {
+    background: $off-white;
+    border: 1px solid darken($off-white, 7%);
+    color: $gray;
+    display: flex;
+    justify-content: space-between;
+    padding: $s-size $m-size;
+}
+
+.list-item {
+    border: 1px solid darken($off-white, 7);
+    border-top: none;
+    color: $dark-gray;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: $m-size;
+    transition: background .3s ease;
+
+    // 用&來使用偽類選擇器
+    &:hover {
+        background: $off-white;
+    }
+
+    @media (max-width: $mobile-breakpoint) {
+        flex-direction: column;
+        align-items: initial;
+        padding: $s-size;
+    }
+}
+
+.list-item--message {
+    color: $gray;
+    justify-content: center;
+    align-items: center;
+    padding: $m-size;
+
+    &:hover {
+        background: none;
+    }
+}
+
+.list-item__title {
+    margin: 0;
+    word-break: break-all;
+}
+
+.list-item__sub-title {
+    color: $gray;
+    font-size: $font-size-small;
+}
+
+.list-item__data {
+    margin: 0;
+    padding-left: $s-size;
+    white-space: nowrap;
+
+    @media (max-width: $mobile-breakpoint) {
+        margin: $s-size 0 0 0;
+        padding: 0;
+    }
+}
+
+.list-body {
+    margin-bottom: $m-size;
+}
+

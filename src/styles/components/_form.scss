@@ -1,0 +1,15 @@
+.form {
+    display: flex;
+    flex-direction: column;
+
+    // 直接加進另一個選擇器的話，效果如同.form * {}一樣
+    // 這邊想實現.form > * {}，因此在前面多加一個>
+    > * {
+        margin: 0 0 $m-size 0;
+    }
+}
+
+.form__error {
+    margin: 0 0 $m-size 0;
+    font-style: italic;
+}

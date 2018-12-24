@@ -1,0 +1,37 @@
+* {
+    box-sizing: border-box;
+}
+
+html{
+    // html文字預設大小為16px，
+    // 下方設定可以強制將預設改為10px，以便後面的rem, em單位做使用
+    font-size: 62.5%;
+}
+
+body{
+    // 字體優先順位，若前面的字體瀏覽器不支援則自動往下一個設定
+    font-family: Helvetica, Arial, sans-serif;
+
+    // rem和em都是相對單位，
+    // rem相對於html的預設字體大小(本程式已被設定成10px)，1.6rem則為10px的1.6倍
+    // em則是相對於父元素的字體大小。例如父元素設定為1.6rem(等於px)，子元素設定為2em，則子元素字體大小為20px
+    font-size: $m-size;
+    color: $dark-gray;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+button:disabled {
+    cursor: default;
+}
+
+.is-active{
+    font-weight: bold;
+}
